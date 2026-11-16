@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About This Web</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            font-size: 20px;
+
+            color: #243b2b;
+            width: 100%;
+        }
+        .fontar {
+             font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            color: white;
+            text-align: center;
+            font-size: 50px;
+            margin: 0px;
+
+        }
+        
+        nav {
+            text-align: center;
+        }
+        
+        .fontar {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .kotaka {
+            background-color: rgba(255, 255, 255, 0);
+            color: rgb(255, 255, 255);
+            padding: 13px;
+            margin: 0px;
+            border: #ffffff;
+            border: 2px solid rgb(255, 255, 255);
+        }
+        .kotaka:hover{
+            background-color: rgb(255, 255, 255);
+            opacity: 1;
+            color: black;
+        }
+
+        nav a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.2s ease;
+            border-radius: 30px;
+            width: 10%;
+            
+        }
+          nav a:hover {
+            transform: translateY(-5px);
+            border: 2px solid #ffffff;
+
+        }
+        .teks {
+    flex: 1;
+}
+
+        .kontainer-gambar {
+            display: flex;
+            gap: 100px;
+            justify-content: center;
+            margin: 100px;
+            transition: transform 0.2s ease;
+        }
+
+        .kontainer-gambar img {
+            width: 300px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 0px 15px rgba(0, 0, 0, 0.3);
+            border: 2px solid white;
+            transition: transform 0.2s ease;
+        }
+        .kontainer-gambar img:hover {
+            transform:scale(1.2);
+        }
+        section {
+            text-align: center;
+            font-size: 30px;
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 100px auto;
+            padding: 10px;
+            box-shadow: 0 0px 15px rgba(0, 0, 0, 0.3);
+            width: 65%;
+            border-radius: 30px;
+            border: 5px solid white;
+        }
+             #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -2;
+  object-fit: cover;
+        }
+         .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+
+</style>
+<body>
+    <video autoplay muted loop id="myVideo">
+  <source src="video/p2.mp4" type="video/mp4" >
+    </video>
+    <div class="overlay"></div>
+    <header>
+        <h1>ABOUT</h1>
+    </header>
+
+    <nav>
+        
+        <a href="index.html" class="kotaka">Back</a>
+    </nav>
+    <section>
+        <h1>Tentang Website Ini</h1>
+        <pre class="fontar"><strong>
+Website ini merupakan platform edukasi yang bertujuan untuk meningkatkan
+kesadaran masyarakat tentang pentingnya menjaga lingkungan melalui 
+pengelolaan limbah yang baik dan benar.
+
+Di sini, kamu dapat mengenal berbagai jenis limbah, mulai dari limbah
+organik, anorganik, padat, cair, gas, hingga limbah B3. Selain itu,
+kamu juga dapat mempelajari dampak limbah terhadap
+ lingkungan serta berbagai cara untuk mengurangi dan mengelolanya.
+
+Kami percaya bahwa menjaga lingkungan tidak harus dimulai dari hal
+besar. Kebiasaan sederhana seperti memilah sampah, mendaur ulang barang
+bekas, dan mengurangi penggunaan plastik dapat
+memberikan perubahan yang berarti.</strong></pre>
+    </section>
+</body>

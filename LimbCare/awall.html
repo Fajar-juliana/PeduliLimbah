@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LimbCare</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            z-index: 2;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #ffffff;
+            min-height: 100vh;
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 2;
+        }
+        .subtitle {
+            font-size: clamp(0.95rem, 2vw, 1.2rem);
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 400;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            line-height: 1.6;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+            z-index: 2;
+        }
+
+
+        
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 2rem 1.5rem;
+            max-width: 800px;
+            margin: auto;
+            z-index: 2;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            letter-spacing: 4px;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            z-index: 2;
+        }
+
+ 
+
+        
+        .btn-group {
+            display: flex;
+            gap: 1.25rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+            z-index: 2;
+        }
+
+        .btn {
+            padding: 0.85rem 2.25rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            z-index: 2;
+        }
+
+        
+        .btn-primary {
+            background-color: rgba(255, 255, 255, 0);
+            color: #ffffff;
+            border: 2px solid #ffffff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        .btn-primary:hover {
+            background-color: rgba(255, 255, 255, 1);
+            color: black;
+            transform: translateY(10px);
+            scale: 1.2;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+        #bg-video {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+        z-index: -1;
+}
+
+
+        
+        
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="bg-video">
+    <source src="video/p2.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <main>
+        <h1>PeduliLimbah</h1>
+        <p class="subtitle">By Kelompok 3</p>
+        
+        <div class="btn-group">
+            <a href="index.html" class="btn btn-primary">Tentang Limbah</a>
+        </div>
+    </main>
+
+    <div style="height: 3rem;"></div>
+
+</body>
+</html>

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LimbCare</title>
+    <style>
+        html {
+        scroll-behavior: smooth;
+        }
+        body {
+           
+            font-family: Arial, sans-seri_f;
+            margin: 0;
+            font-size: 20px;
+            color: #243b2b;
+            width: 100%;
+        }
+
+        header {
+            
+            display: flex;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            width: auto;
+            gap: 40%;
+            margin: auto;
+        }
+        
+        nav {
+            position: fixed;
+            display: flex;
+            background-color: rgba(255, 255, 255, 0);
+            text-align: center;
+            padding: 20px;
+            margin: auto;
+            width: auto;
+        }
+        .fontar {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .kotaka {
+            background-color: rgba(255, 255, 255, 0);
+            opacity: 1;
+            width: auto;
+            padding: 13px;
+            margin: auto;
+        }
+        .kotaka:hover{
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        .menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+        nav a {
+            opacity: 1;
+            display: inline-block;
+            color: white;
+            width: auto;
+            text-decoration: none;
+            transition: transform 0.2s ease;
+            border-radius: 25px;
+            
+        }
+          nav a:hover {
+            opacity: 1;
+            transform: scale(1.2);
+            border: 2px solid #ffffff;
+        }
+        .ncontainer {
+            width: auto;
+            position: sticky;
+            top: -70px;
+            z-index: 10000;
+        }
+        section {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            font-size: 30px;
+            gap: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 100px auto;
+            border: 8px solid #ffffff;
+            padding: 40px;
+            box-shadow: 0 0px 15px rgba(0, 0, 0, 0.3);
+            width: 70%;
+            border-radius: 10px;
+            opacity: 0;
+            scale: 0.5;
+            transform: tran6slateY(50px);
+            animation: muncul linear forwards;
+            animation-timeline: view();
+            animation-range: entry 0% entry 60%;
+        }
+        section li b {
+            display: flex;
+            background-color: rgb(187, 240, 222);
+            margin: 12px;
+            padding: 12px;
+            border-radius: 15px;
+        }
+        
+
+@keyframes muncul {
+    to {
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0);
+    }
+}
+
+        h2 {
+            color: #000000;
+            
+        }
+
+        img {
+            width: 100%;
+            display: flex;
+            margin: auto;
+            border-radius: 8px;
+            gap: 20px;
+        }
+        .borderimg {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+        }
+        .kecil {
+            width: 30%;
+            display: flex;
+            margin: 0px;
+            border: 10px;
+            padding: 0px;
+        }
+        .teks {
+    flex: 1;
+}
+
+        footer {
+            background-color: rgba(51, 51, 51, 0.7);
+            color: white;
+            width: auto;
+            text-align: center;
+            padding: 20px;
+
+            
+        }
+
+        footer a  {
+            display: inline-block;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0 0px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            transition: transform 0.2s ease;
+        }
+        .flek {
+            display: flex;
+        }
+        footer a:hover {
+            background-color: rgb(201, 201, 201);
+            transform: scale(1.5);
+        }
+        .balik {
+            background-color: white;
+            border-radius: 12px;
+            width: 40%;
+            padding: 15px;
+            box-shadow: 0 0px 15px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+            color: black;
+        }
+        .balik:hover {
+            background-color: rgb(230, 230, 230);
+        }
+        .balikk {
+            background-color: #2e7d32;
+            width: 100%;
+            padding: 0%;
+        }
+        #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -2;
+  object-fit: cover;
+        }
+         .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+        .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+.kotak-section {
+    opacity: 0;
+    scale: 0.5;
+    transform: tran6slateY(50px);
+    animation: muncul linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% entry 60%;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    margin: 150px;
+    border-radius: 15px;
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.contoh {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    font-size: 25px;
+    background-color: rgba(242, 221, 182, 0.8);
+    color: #6a5925;
+    width: auto;
+    margin: 10px;
+    gap: 10px;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    border: 3px solid #dfc479;
+    border-radius: 20px;
+}
+.contoha {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    font-size: 25px;
+    background-color: rgba(177, 238, 244, 0.8);
+    color: #1d3f55;
+    width: auto;
+    margin: 10px;
+    gap: 10px;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    border: 3px solid #79ccdf;
+    border-radius: 20px;
+}
+.contohb {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    font-size: 25px;
+    background-color: rgba(229, 229, 229, 0.8);
+    color: #414141;
+    width: auto;
+    margin: 10px;
+    gap: 10px;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    border: 3px solid #dcdcdc;
+    border-radius: 20px;
+}
+.contohx {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    font-size: 25px;
+    background-color: rgba(181, 236, 197, 0.8);
+    color: #154414;
+    width: auto;
+    margin: 10px;
+    gap: 10px;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    border: 3px solid #63b660;
+    border-radius: 20px;
+}
+
+
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="myVideo">
+  <source src="video/p2.mp4" type="video/mp4" >
+    </video>
+    <div class="overlay"></div>
+    <header id="kembali">
+        <nav class="navbar">
+    <div>
+        <h1>PeduliLimbah</h1>
+    </div>
+
+    <div class="menu">
+        <a href="awall.html" class="kotaka">Back</a>
+        <a href="#pengertian" class="kotaka">Pengertian</a>
+        <a href="#jenis" class="kotaka">Jenis Limbah</a>
+        <a href="#dampak" class="kotaka">Dampak</a>
+        <a href="#solusi" class="kotaka">Solusi</a>
+        <a href="#obser" class="kotaka">Observasi</a>
+        <a href="about.html" class="kotaka">About</a>
+    </div>
+
+    </header>
+    <section>
+        <div class="teks">
+            <h2 id="pengertian">Pengetian Limbah</h2>
+            <p>Limbah adalah sisa dari suatu kegiatan atau proses produksi yang sudah tidak digunakan lagi dan dibuang ke lingkungan. Limbah dapat berasal dari aktivitas rumah tangga, industri, pertanian, peternakan, perdagangan, maupun kegiatan lainnya.
+
+Limbah tidak selalu berbentuk benda padat. Limbah juga dapat berupa cairan, gas, maupun zat berbahaya yang berpotensi mencemari lingkungan apabila tidak dikelola dengan baik.</p>
+        </div>
+            <div><img src="foto/memilah.jpeg"
+             alt="Sampah yang perlu dikelola"></div>
+    </section>
+
+    
+ 
+<div class="kotak-section">
+    <section id="jenis">
+        <div class="teks">
+        <h2>Jenis Limbah Berdasarkan Wujudnya:</h2>
+        </section>
+    <section>
+        <div class="teks">
+            <h1>Limbah padat:</h1><h3>Buangan berwujud padat yang berasal dari kegiatan industri maupun domestik. Dalam kehidupan sehari-hari sering disebut sampah.</h3>
+            <hr>
+            <div class="contoh">plastik</div>
+            <div class="contoh">kertas</div>
+            <div class="contoh">kaca</div>
+            <div class="contoh">logam</div>
+        </div>
+            <div class="kecil"><img src="foto/padat.jpeg" class="borderimg"></div>
+           
+        </section>
+        <section>
+             
+            <div class="kecil"><img src="foto/limbah cair.jpeg" class="borderimg"></div>
+        <div class="teks">
+            <h1>Limbah cair:</h1> <h3>Segala jenis buangan yang berwujud cair, larut dalam air, atau tersuspensi dan dapat mengalir menuju badan perairan (sungai/laut).</h3>
+            <hr>
+            <div class="contoha">Air bekas cucian</div>
+            <div class="contoha">Minyak goreng bekas</div>
+            <div class="contoha">Sisa oli bekas</div>
+        </div>
+       
+        </section>
+          <section>
+        <div class="teks">
+            <h1>Limbah gas:</h1><h3>Buangan yang berwujud gas dan memanfaatkan udara sebagai media penyebarannya sehingga memengaruhi kualitas atmosfer..</h3>
+             <hr>
+            <div class="contohb">Asap kendaraan</div>
+            <div class="contohb">Asap pabrik</div>
+            <div class="contohb">Gas hasil pembakaran</div>
+            <div class="contohb">logam</div>
+        </div>
+            <div class="kecil"><img src="foto/limbah gas.jpeg" class="borderimg"></div>
+        </section>
+</div>
+<div class="kotak-section">
+        <section>
+        <div class="teks">
+        <h2>Jenis Limbah Berdasarkan Senyawa/Sifatnya:</h2>
+        </section>
+    
+         <section>
+             <div class="kecil"><img src="foto/download (8)-Photoroom.png"></div>
+            <div class="kecil"><img src="foto/organik.jpeg" class="borderimg"></div>
+        <div class="teks">
+             <h1>Limbah organik:</h1><h3>Limbah organik adalah sisa buangan yang berasal dari bahan alami atau makhluk hidup serta mudah terurai secara biologis oleh mikroorganisme</h3>
+             <hr>
+            <div class="contoh">Kulit buah</div>
+            <div class="contoh">Daun kering</div>
+            <div class="contoh">Sisa sayuran</div>
+            <div class="contoh">Kotoran hewan</div>
+        </div>
+        </section>
+          <section>
+        <div class="teks">
+              <h1>Limbah anorganik:</h1><h3>Sampah anorganik adalah limbah yang berasal dari bahan non-hayati atau sintetis yang sangat sulit atau tidak dapat terurai secara alami oleh mikroorganisme</h3>
+              <hr>
+               <div class="contoha">Plastik</div>
+            <div class="contoha">Kaca</div>
+            <div class="contoha">Kaleng</div>
+            <div class="contoha">logam</div>
+        </div>
+            <div class="kecil"><img src="foto/anorganik.jpeg" class="borderimg"></div>
+        </section>
+         <section>
+            <div class="kecil"><img src="foto/B3.jpeg" class="borderimg"></div>
+        <div class="teks">
+              <h1>Limbah B3:</h1><h3>Limbah B3 (Bahan Berbahaya dan Beracun) adalah sisa dari suatu usaha atau kegiatan yang mengandung bahan berbahaya dan/atau beracun karena sifat, konsentrasi, atau jumlahnya dapat mencemarkan, merusak lingkungan hidup, serta membahayakan kesehatan manusia</h3>
+              <hr>
+               <div class="contohb">Baterai Bekas</div>
+            <div class="contohb">Sisa Cat</div>
+            <div class="contohb">Obat Kadaluarsa</div>
+            <div class="contohb">Oli Bekas</div>
+        </div>
+         </section>
+        <section>
+        <div class="teks">
+              <h1>Limbah Residu</h1><h3> Limbah residu adalah jenis limbah atau sampah yang sudah tidak dapat didaur ulang atau dimanfaatkan kembali dengan mudah sehingga biasanya harus dibuang ke tempat pembuangan akhir (TPA)</h3>
+              <hr>
+               <div class="contoh">Popok Sekali Pakai</div>
+            <div class="contoh">Puntung Rokok</div>
+            <div class="contoh">Permen Karet Bekas</div>
+        </div>
+        <div class="kecil"><img src="foto/m0krn8CbLFA0prWICvRoLwZKQ2ipYB-metac2FtcGFoIHJlc2lkdS1taW4uanBn-.jpg" class="borderimg"></div>
+        </section>
+    </section>
+</div>
+<div class="kotak-section">
+    <section id="jenis">
+        <div class="teks">
+        <h2>Jenis Limbah Berdasarkan Sumbernya:</h2>
+        </section>
+    <section>
+        <div class="teks">
+            <h1>Limbah Domestik (Rumah Tangga): </h1>
+            <h3>Limbah yang berasal dari aktivitas sehari-hari di lingkungan permukiman, perkantoran, pasar, restoran, dan tempat umum.</h3>            <hr>
+            <div class="contoh">sisa makanan</div>
+            <div class="contoh">kertas</div>
+            <div class="contoh">sampah plastik kemasan</div>
+            <div class="contoh">kaleng bekas</div>
+        </div>
+            <div class="kecil"><img src="foto/domestik.jpg" class="borderimg"></div>
+           
+        </section>
+        <section>
+             
+            <div class="kecil"><img src="foto/industri.jpe" class="borderimg"></div>
+        <div class="teks">
+            <h1>Limbah Industri:</h1>
+            <h3>Limbah yang dihasilkan dari sisa proses produksi pabrik atau kegiatan manufaktur. Karakteristik limbah ini sangat bergantung pada jenis industrinya (tekstil, makanan, kimia, logam, dll.).</h3>
+            <hr>
+            <div class="contoh">oli bekas mesin</div>
+            <div class="contoh">asap erobong pabrik</div>
+            <div class="contoh">serpihan logam</div>
+        </div>
+       
+        </section>
+          <section>
+        <div class="teks">
+            <h1>Limbah Pertanian dan Perkebunan:</h1>
+            <h3>Limbah yang berasal dari kegiatan bercocok tanam, pemeliharaan tanaman, hingga masa panen.</h3>             <hr>
+            <div class="contohx">sisa pestisida</div>
+            <div class="contohx">jerami padi</div>
+            <div class="contohx">pelepah sawit</div>
+            <div class="contohx">dedaunan kering</div>
+        </div>
+            <div class="kecil"><img src="foto/perkebunan.jpg" class="borderimg"></div>
+        </section>
+        <section>
+        <div class="teks">
+            <h1>Limbah Peternakan dan Perikanan:</h1>
+            <h3>Limbah yang dihasilkan dari kegiatan pemeliharaan hewan ternak maupun budidaya perikanan.</h3>            <hr>
+            <div class="contoh">kotoran hewan</div>
+            <div class="contoh">sisa pakan ternak</div>
+            <div class="contoh">bangkai hewan</div>
+        </div>
+            <div class="kecil"><img src="foto/peternakan.jpe" class="borderimg"></div>
+           
+        </section>
+        <section>
+             
+            <div class="kecil"><img src="foto/medis.jpe" class="borderimg"></div>
+        <div class="teks">
+            <h1>Limbah Medis:</h1>
+            <h3>Limbah yang berasal dari fasilitas pelayanan kesehatan seperti rumah sakit, puskesmas, klinik, apotek, dan laboratorium medis. Limbah ini umumnya termasuk kategori B3 (Bahan Berbahaya dan Beracun) karena bersifat infeksius.</h3>            <hr>
+            <div class="contoha">jarum suntik bekas</div>
+            <div class="contoha">botol infus</div>
+            <div class="contoha">masker medis bekas</div>
+        </div>
+       
+        </section>
+          <section>
+        <div class="teks">
+            <h1>Limbah Pertambangan:</h1>
+            <h3>Limbah yang dihasilkan dari proses penggalian, ekstraksi, dan pemurnian sumber daya alam dari dalam bumi.</h3>             <hr>
+            <div class="contohb">lumpur tambang</div>
+            <div class="contohb">merkuri</div>
+            <div class="contohb">batuan sisa galian</div>
+        </div>
+            <div class="kecil"><img src="foto/pertambangan.png" class=""></div>
+        </section>
+</div>
+       
+
+    <section id="dampak">
+          <div><img src="foto/pencemaran tanah.jpeg"
+             alt="Sampah plastik"></div>
+        <div class="teks">
+        <h2>Dampak Limbah</h2>
+        <p>Limbah yang tidak dikelola dengan baik dapat menyebabkan pencemaran air, tanah, dan udara. Sampah yang menumpuk juga dapat menyumbat selokan, menyebabkan banjir, dan merusak habitat makhluk hidup.</p>
+        </div>
+    </section>
+
+    <section id="solusi">
+        <div>
+        <h2>Cara Mengurangi Limbah</h2>
+        <ol>
+            <li><h3>Reduce:</h3> mengurangi segala sesuatu yang berpotensi menimbulkan sampah atau membatasi penggunaan barang sekali pakai sejak dari awal.</li>
+            <p>Contoh: Membawa botol minum sendiri saat bepergian untuk menghindari pembelian air kemasan plastik.</p>
+            <li><h3>Reuse:</h3> kegiatan menggunakan kembali barang atau sampah yang masih layak pakai untuk fungsi yang sama ataupun fungsi yang berbeda tanpa melalui proses pengolahan kembali menjadi bahan baku</li>
+            <p>Contoh:  Memanfaatkan botol plastik bekas minuman menjadi pot tanaman, kaleng biskuit menjadi tempat alat tulis, atau kardus bekas sebagai kotak penyimpanan.</p>
+            <li><h3>Recycle:</h3> Mengolah bahan limbah melalui proses tertentu (seperti penghancuran atau peleburan) menjadi bahan baku atau produk baru.</li>
+            <p>Contoh: Sisa makanan dan daun kering yang Diolah melalui pembusukan alami (komposting) menjadi pupuk kompos kaya nutrisi untuk tanaman.</p>
+            <li><h3>CONTOH TINDAKAN NYATA YANG DAPAT DI LAKUKAN</h3></li>
+            <p>- Memilah sampah organik dan anorganik.</p>
+            <p>- Membawa botol minum dan tas belanja sendiri.</p>
+            <p>- Tidak membuang sampah sembarangan.</p>
+        </ol>
+        </div>
+    </section>
+     <section id="obser">
+          <div><img src="foto/ilhamhalaman.jpeg"
+             alt="ilham ganteng"
+             ></div>
+        <div>
+        <h2>Observasi</h2>
+        <b></b>
+        <p>Kondisi Barang dan Kebersihan:
+Berdasarkan hasil observasi, kondisi di lingkungan ini ada banyak barang yang berserakan dan menumpuk di lantai, seperti pakaian, kardus bekas dan botol air mineral. Selain itu, di sudut lantai terlihat sampah kemasan makanan ringan yang tergeletak di dekat selang air dan pipa, sehingga menunjukkan bahwa kebersihan rumah kurang terjaga.</p>        </div>
+    </section>
+    <section>
+        <div><img src="foto/ciki.jpeg" alt="ciki ilham"></div>
+        <div><img src="foto/galon.jpeg" alt="galon ilham"></div>
+        <div>
+            <h2>Jenis Sampah</h2>
+            <p>Di lingkungan ini terdapat limbah yang jenis golongannya Limbah Padat seperti bekas kemasan ciki twist, kertas, plastik dan pakaian. Dan juga ada limbah jenis anorganik yaitu ada kardus dan galon</p>
+        </div>
+    </section>
+   
+    
+     <footer>
+        <a href="#kembali">
+            Kembali Keatas
+        </a>
+        <br>
+        <p></p>
+    </footer>
+
+    <footer>
+    <pre class="fontar"><b>DIBUAT OLEH</b>
+- Fajar Juliana
+- Rafha
+- M ilham
+- Zhyan
+        </pre>
+         <div>
+        <b>Copyright © 2026 Kelompok 3</b>
+    </div>
+    </footer>
+   
+
+</body>
+</html>
